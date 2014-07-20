@@ -7,6 +7,10 @@
 *.DS_Store
 *.swp
 *.out
+*.log
 
 #project specific
 phrases/
+clinch
+steadshot
+errorComp
