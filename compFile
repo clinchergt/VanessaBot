@@ -1,0 +1,208 @@
+MyBot.java:1: package org.jibble.pircbot does not exist
+import org.jibble.pircbot.*;
+^
+MyBot.java:7: cannot find symbol
+symbol: class PircBot
+public class MyBot extends PircBot {
+                           ^
+MyBot.java:13: cannot find symbol
+symbol  : method setName(java.lang.String)
+location: class MyBot
+		this.setName("Vanessa");
+		    ^
+MyBot.java:20: cannot find symbol
+symbol  : method identify(java.lang.String)
+location: class MyBot
+		identify("iProgram");
+		^
+MyBot.java:58: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+					sendMessage(sender, "Queue is empty.");
+					^
+MyBot.java:63: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(sender, "#queue, #remove, #help, #pause, #list");
+				^
+MyBot.java:68: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(sender, whispering ? "Whispering is now on." : "Whispering is now off.");
+				^
+MyBot.java:73: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+					sendMessage(sender, i + ": " + whispered_messages.get(i));
+					^
+MyBot.java:79: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage("#insomnia", message);
+				^
+MyBot.java:89: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(channel, whispered_messages.get(0));
+				^
+MyBot.java:97: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(channel, time);
+				^
+MyBot.java:99: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(channel, "I'm not your bitch.");
+				^
+MyBot.java:104: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(channel, "Visit http://www.digitalno.de");
+				^
+MyBot.java:106: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(channel, "I'm not your bitch.");
+				^
+MyBot.java:110: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+			sendMessage(channel, "No help available.");
+			^
+MyBot.java:114: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(channel, "I guess this means goodbye.");
+				^
+MyBot.java:115: cannot find symbol
+symbol  : method sendAction(java.lang.String,java.lang.String)
+location: class MyBot
+				sendAction(channel, "hugs " + sender);
+				^
+MyBot.java:116: cannot find symbol
+symbol  : method getOutgoingQueueSize()
+location: class MyBot
+				while(getOutgoingQueueSize() > 0) {
+				      ^
+MyBot.java:119: cannot find symbol
+symbol  : method partChannel(java.lang.String,java.lang.String)
+location: class MyBot
+				partChannel(channel, "I'm gonna miss you, " + sender + ".");
+				^
+MyBot.java:124: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+			sendMessage(channel, "PAWNG!");
+			^
+MyBot.java:127: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+			sendMessage(channel, "Consider it done, Sir.");
+			^
+MyBot.java:139: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(channel, ((String[]) messages.get(i))[0] + " " + 
+				^
+MyBot.java:168: cannot find symbol
+symbol  : variable fileName
+location: class MyBot
+				RandomAccessFile f = new RandomAccessFile(fileName, "rw");
+				                                          ^
+MyBot.java:173: cannot find symbol
+symbol  : method readbyte()
+location: class java.io.RandomAccessFile
+					byte b = f.readbyte();
+					          ^
+MyBot.java:174: cannot find symbol
+symbol  : variable b
+location: class MyBot
+				} while(b != 10);
+				        ^
+MyBot.java:179: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+			sendMessage(channel, "I don't know that keyword.");
+			^
+MyBot.java:202: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+			sendMessage(channel, "Warning: File \"" + sender + "\" doesn't exist yet.");	
+			^
+MyBot.java:210: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(channel, "File \"" + sender + "\" was created.");	
+				^
+MyBot.java:216: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+			sendMessage(channel, alias_msg + "Phrase added.");
+			^
+MyBot.java:234: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+			sendMessage(channel, real_sender + ": You haven't added any phrases yet.");
+			^
+MyBot.java:254: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(channel, real_sender + ": " + alias_msg + "No matches found.");
+				^
+MyBot.java:260: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(channel, real_sender + ": " + alias_msg + results.length + " results found -> " + 
+				^
+MyBot.java:265: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(channel, real_sender + ": " + alias_msg + results[i]);
+				^
+MyBot.java:267: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+			sendMessage(channel, "oops");
+			^
+MyBot.java:289: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+			sendMessage(channel, "oops, couldn't generate URL");
+			^
+MyBot.java:330: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+				sendMessage(channel, "Hey " + sender + ", " +
+				^
+MyBot.java:340: cannot find symbol
+symbol  : method isConnected()
+location: class MyBot
+		while(!isConnected()) {
+		       ^
+MyBot.java:342: cannot find symbol
+symbol  : method reconnect()
+location: class MyBot
+				reconnect();
+				^
+MyBot.java:353: cannot find symbol
+symbol  : method joinChannel(java.lang.String,java.lang.String)
+location: class MyBot
+		joinChannel("#insomnia", "tetris");
+		^
+MyBot.java:358: cannot find symbol
+symbol  : method getNick()
+location: class MyBot
+		if(recipientNick.equalsIgnoreCase(getNick())) {
+		                                  ^
+MyBot.java:359: cannot find symbol
+symbol  : method joinChannel(java.lang.String,java.lang.String)
+location: class MyBot
+			joinChannel(channel, "tetris");
+			^
+MyBot.java:360: cannot find symbol
+symbol  : method sendMessage(java.lang.String,java.lang.String)
+location: class MyBot
+			sendMessage(channel, kickerNick + ": Go fuck yourself.");
+			^
+42 errors

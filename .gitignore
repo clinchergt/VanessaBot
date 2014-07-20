@@ -1,0 +1,12 @@
+#java
+*.class
+
+#generic
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
+#project specific
+phrases/
