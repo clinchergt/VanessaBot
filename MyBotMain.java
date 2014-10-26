@@ -11,6 +11,7 @@ public class MyBotMain {
 		bot.setVerbose(true);
 		bot.connect("irc.rizon.net");
 		bot.joinChannel("#insomnia", "meatspin");
+		//bot.joinChannel("#testingVanessa");
 
 		MyBot imaginaryBot = new MyBot("freenode");
 		imaginaryBot.setVerbose(true);

@@ -6,6 +6,9 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.ArrayDeque;
 
+import java.util.Collections;
+import java.util.Arrays;
+
 public class MyBot extends PircBot {
 	private ArrayList<String[]> messages;
 	private ArrayList<String> whispered_messages;
@@ -13,6 +16,15 @@ public class MyBot extends PircBot {
 	private	ArrayDeque<Long> lastMessagesArray;		//temporary array to store the dates from the last messages
 	private boolean whispering;
 	private String network;
+
+	// Steve is working here
+	private boolean pokerStart = false;
+	private boolean pokerPlay = false;
+	private String[] players = new String[6];
+	private String[] deck = new String[52];
+	private int numPlayers = 0;
+	// </Steve>
+
 
 	public MyBot() {
 		this.setName("Vanessa");
@@ -230,7 +242,70 @@ public class MyBot extends PircBot {
 			sendMessage(channel, "I don't know that keyword.");
 
 		}
+
+		// Steve is working here
+
+		if(message.equalsIgnoreCase("!poker")) {
+			if((pokerStart == true) || (pokerPlay == true)) {
+				sendMessage(channel, "A poker game is already in session.");
+			}
+			else {
+				sendMessage(channel, sender + " wishes to start a poker game.");
+				pokerStart = true;
+				players[numPlayers] = sender;
+				numPlayers++;
+				sendMessage(channel, "Type \"!join\" to play.");
+				sendMessage(channel, sender + ", type \"!start\" to start the game.");
+			}
+		}
+		if((pokerStart == true) && (message.equalsIgnoreCase("!join"))) {
+			// check to make sure player isn't already playing
+			if(numPlayers < 6) {
+				players[numPlayers] = sender;
+				numPlayers++;
+				sendMessage(channel, sender + " added as Player " + numPlayers);
+			}
+			else {
+				sendMessage(channel, "Sorry, there can only be max 6 players.");
+			}
+		}
+		if((pokerStart == true) && (sender.equals(players[0])) && (message.equalsIgnoreCase("!start"))) {
+			if(numPlayers <= 1) {
+				sendMessage(channel, "You can't play poker with yourself!");
+				// Maybe later add AI to play vs. computer?
+				pokerStart = false;
+				numPlayers = 0;
+				players = new String[6];
+			}
+			else {
+				pokerStart = false;
+				pokerPlay = true;
+				sendMessage(channel, "The players are -");
+				for(int i = 0; i < numPlayers; i++) {
+					int j = i + 1;
+					sendMessage(channel, "Player " + j + ": " + players[i]);
+				}
+			}
+		}
+		// </Steve>
 	}
+
+	// <Steve>
+	public void createDeck() {
+		char[] values = new char[] {'2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'};
+		char[] suits = new char[] {'S', 'H', 'D', 'C'};
+		int k = 0;
+		deck = new String[52];
+		for(int i = 0; i < values.length; i++) {
+			for(int j = 0; j < suits.length; j++) {
+				deck[k] = "" + values[i] + suits[j];
+				k++;
+			}
+		}
+		Collections.shuffle(Arrays.asList(deck));
+	}
+	// </Steve>
+
 
 	public void generateAnkiDeck(String sender) {
 
