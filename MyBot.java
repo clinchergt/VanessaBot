@@ -429,23 +429,25 @@ public class MyBot extends PircBot {
 		//writes given results into that file and returns a URL to that file
 		//tbd: delete older files at some point
 		int x = (int) (100 + (999 - 100) * Math.random());
-		String path = "/var/www/html/queries/";
+		String path = "queries/";
 		String file = "query" + x + ".txt";
+		String url = "Couldn't generate URL"; 
 
 		try {
-			FileWriter fstream = new FileWriter(path + file);
-			BufferedWriter out = new BufferedWriter(fstream);
+			Writer out = new BufferedWriter(new OutputStreamWriter(
+				new FileOutputStream(path + file), "UTF-8"));
 
 			for(int i = 0; i < results.length; i++) {
 				out.write(results[i] + "\n");
 			}
 
+			url = "http://digitalno.de/queries/" + file;
+
 			out.close();
 		} catch(Exception e) {
-			sendMessage(channel, "oops, couldn't generate URL");
+			sendMessage(channel, "Oops!");
 		}
 
-		String url = "http://digitalno.de/queries/" + file;
 		return url;
 	}
 
